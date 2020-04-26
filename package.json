@@ -1,14 +1,18 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "aberdeenselfcatering.com",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": {
+    "name": "Greg Brimble",
+    "url": "https://gregbrimble.com",
+    "email": "hello@gregbrimble.com"
+  },
   "dependencies": {
     "gatsby": "2.20.35",
     "gatsby-image": "2.3.5",
+    "gatsby-plugin-layout": "1.2.4",
     "gatsby-plugin-manifest": "2.3.7",
-    "gatsby-plugin-offline": "3.1.5",
     "gatsby-plugin-react-helmet": "3.2.5",
     "gatsby-plugin-sharp": "2.5.7",
     "gatsby-source-filesystem": "2.2.5",
@@ -19,7 +23,12 @@
     "react-helmet": "6.0.0"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "2.1.2",
+    "@tailwindcss/ui": "0.2.2",
+    "autoprefixer": "9.7.6",
+    "gatsby-plugin-postcss": "2.2.4",
     "prettier": "2.0.5",
+    "react-transition-group": "4.3.0",
     "tailwindcss": "1.3.5"
   },
   "keywords": [

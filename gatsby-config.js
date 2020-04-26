@@ -1,8 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Self-Catering Accommodation | A & L Enterprises`,
+    description: `Are you looking for self-catering accommodation in the Aberdeen area? Look no further. Contact A & L Enterprises today. We provide affordable services.`,
+    copyright: "A & L Enterprises",
+    contact: {
+      phoneNumbers: [
+        { value: "+44 1224 868 957", type: "landline" },
+        { value: "+44 7927 938 834", type: "mobile" },
+      ],
+      emailAddress: "info@aberdeenselfcatering.com",
+    },
+    pricing: "£250 per week",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,8 +35,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-layout`,
   ],
 }
