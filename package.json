@@ -6,13 +6,14 @@
   "author": {
     "name": "Greg Brimble",
     "url": "https://gregbrimble.com",
-    "email": "hello@gregbrimble.com"
+    "email": "developer@gregbrimble.com"
   },
   "dependencies": {
     "gatsby": "2.20.35",
     "gatsby-image": "2.3.5",
     "gatsby-plugin-layout": "1.2.4",
     "gatsby-plugin-manifest": "2.3.7",
+    "gatsby-plugin-postcss": "2.2.4",
     "gatsby-plugin-react-helmet": "3.2.5",
     "gatsby-plugin-sharp": "2.5.7",
     "gatsby-source-filesystem": "2.2.5",
@@ -20,15 +21,14 @@
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-helmet": "6.0.0"
+    "react-helmet": "6.0.0",
+    "react-transition-group": "4.3.0"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "2.1.2",
     "@tailwindcss/ui": "0.2.2",
     "autoprefixer": "9.7.6",
-    "gatsby-plugin-postcss": "2.2.4",
+    "gh-pages": "2.2.0",
     "prettier": "2.0.5",
-    "react-transition-group": "4.3.0",
     "tailwindcss": "1.3.5"
   },
   "keywords": [
@@ -39,16 +39,16 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "deploy": "gatsby build && gh-pages -d public",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/GregBrimble/aberdeenselfcatering.com"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/GregBrimble/aberdeenselfcatering.com/issues"
   }
 }
