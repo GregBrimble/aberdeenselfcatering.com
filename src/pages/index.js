@@ -1,8 +1,8 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Hero from "../components/Hero"
-import Contact from "../components/Contact"
+import ContactForm from "../components/ContactForm"
 import SEO from "../components/SEO"
 import FeatureGroup from "../components/FeatureGroup"
 import ThreeCards from "../components/ThreeCards"
@@ -45,12 +45,12 @@ const IndexPage = () => {
         cta={
           <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <div className="rounded-md shadow">
-              <a
-                href="/"
+              <Link
+                to="/properties"
                 className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
               >
                 Our Properties
-              </a>
+              </Link>
             </div>
             <div className="mt-3 sm:mt-0 sm:ml-3">
               <a
@@ -70,8 +70,12 @@ const IndexPage = () => {
           />
         }
         links={[
-          { label: "Our Properties", href: "#" },
-          { label: "Contact", href: "#contact", isPrimary: true },
+          { label: "Our Properties", href: "/properties", internal: true },
+          {
+            label: "Contact",
+            href: "#contact",
+            isPrimary: true,
+          },
         ]}
       />
       <main>
@@ -192,7 +196,7 @@ const IndexPage = () => {
             },
           ]}
         />
-        <Contact
+        <ContactForm
           mainText={
             <p className="mt-3 text-lg leading-6 text-gray-500">
               For a memorable holiday, call us or send a message.
