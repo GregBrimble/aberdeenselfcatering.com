@@ -83,7 +83,7 @@ const IndexPage = () => {
           heading={
             <>
               <p className="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase">
-                Properties for rent in Aberdeen
+                Properties to rent in Aberdeen
               </p>
               <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
                 Comfortable self-catering accommodation from{" "}
