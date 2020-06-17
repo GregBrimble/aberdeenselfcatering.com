@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import Image from "gatsby-image"
 
 import Hero from "../components/Hero"
 import ContactForm from "../components/ContactForm"
@@ -8,7 +9,13 @@ import FeatureGroup from "../components/FeatureGroup"
 import ThreeCards from "../components/ThreeCards"
 
 const IndexPage = () => {
-  const { site } = useStaticQuery(graphql`
+  const {
+    site,
+    heroImage,
+    servicedImage,
+    locationImage,
+    maintainedImage,
+  } = useStaticQuery(graphql`
     {
       site {
         siteMetadata {
@@ -20,6 +27,40 @@ const IndexPage = () => {
             emailAddress
           }
           pricing
+        }
+      }
+      # heroImage: file(relativePath: { eq: "images/cottage_IMG_2928.jpg" }) {
+      heroImage: file(relativePath: { eq: "images/cottage_front view.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      servicedImage: file(relativePath: { eq: "images/cottage_IMG_2917.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      locationImage: file(relativePath: { eq: "images/46-ash_46 AVPL.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      # images/bruce-house_DSCF9592.png
+      # images/cottage_IMG_2917.jpg
+      # images/cottage_IMG_2925.jpg
+      maintainedImage: file(
+        relativePath: { eq: "images/cottage_20160601_131425.jpg" }
+      ) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
         }
       }
     }
@@ -63,10 +104,10 @@ const IndexPage = () => {
           </div>
         }
         image={
-          <img
+          <Image
             className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-            src="https://source.unsplash.com/featured/?house"
-            alt=""
+            fluid={heroImage.childImageSharp.fluid}
+            alt="Weighbridge Cottage"
           />
         }
         links={[
@@ -142,10 +183,10 @@ const IndexPage = () => {
             {
               title: "Serviced apartments",
               image: (
-                <img
+                <Image
                   className="h-48 w-full object-cover"
-                  src="https://source.unsplash.com/featured/?garden"
-                  alt=""
+                  fluid={servicedImage.childImageSharp.fluid}
+                  alt="Weighbridge Cottage bedroom"
                 />
               ),
               href: "/",
@@ -160,9 +201,9 @@ const IndexPage = () => {
             {
               title: "Perfect location",
               image: (
-                <img
+                <Image
                   className="h-48 w-full object-cover"
-                  src="https://source.unsplash.com/featured/?bedroom"
+                  fluid={locationImage.childImageSharp.fluid}
                   alt=""
                 />
               ),
@@ -179,9 +220,9 @@ const IndexPage = () => {
             {
               title: "Well-maintained apartments",
               image: (
-                <img
+                <Image
                   className="h-48 w-full object-cover"
-                  src="https://source.unsplash.com/featured/?kitchen"
+                  fluid={maintainedImage.childImageSharp.fluid}
                   alt=""
                 />
               ),
