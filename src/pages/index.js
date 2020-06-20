@@ -56,7 +56,9 @@ const IndexPage = () => {
         }
       }
       locationImage: file(
-        relativePath: { eq: "images/46-ashvale-place_46 AVPL.png" }
+        relativePath: {
+          eq: "images/46-ashvale-place-and-49-ashvale-place_46 AVPL.png"
+        }
       ) {
         childImageSharp {
           fluid {
