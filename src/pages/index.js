@@ -72,6 +72,9 @@ const IndexPage = () => {
       <Hero
         mainText={
           <>
+            <div className="text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base mb-2">
+              A {"&"} L Enterprises
+            </div>
             <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
               Self-catering accommodation <br className="xl:hidden" />
               available in <span className="text-indigo-600">Aberdeen</span>
@@ -105,7 +108,7 @@ const IndexPage = () => {
         }
         image={
           <Image
-            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+            className="w-full"
             fluid={heroImage.childImageSharp.fluid}
             alt="Weighbridge Cottage"
           />
@@ -113,7 +116,7 @@ const IndexPage = () => {
         links={[
           { label: "Our Properties", href: "/properties", internal: true },
           {
-            label: "Contact A & L Enterprises",
+            label: "Contact",
             href: "#contact",
             isPrimary: true,
           },

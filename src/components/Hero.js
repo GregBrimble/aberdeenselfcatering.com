@@ -3,30 +3,109 @@ import PropTypes from "prop-types"
 import Header from "./Header"
 
 const Hero = ({ mainText, icon, cta, image, links }) => (
-  <header className="relative bg-white overflow-hidden">
-    <div className="max-w-screen-xl mx-auto ">
-      <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-        {/* <svg
-          className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
+  <div className="relative bg-white overflow-hidden">
+    <div className="hidden lg:block lg:absolute lg:inset-0">
+      <svg
+        className="absolute top-0 left-1/2 transform translate-x-64 -translate-y-8"
+        width="640"
+        height="784"
+        fill="none"
+        viewBox="0 0 640 784"
+      >
+        <defs>
+          <pattern
+            id="9ebea6f4-a1f5-4d96-8c4e-4c2abf658047"
+            x="118"
+            y="0"
+            width="20"
+            height="20"
+            patternUnits="userSpaceOnUse"
+          >
+            <rect
+              x="0"
+              y="0"
+              width="4"
+              height="4"
+              className="text-gray-200"
+              fill="currentColor"
+            />
+          </pattern>
+        </defs>
+        <rect
+          y="72"
+          width="640"
+          height="640"
+          className="text-gray-50"
           fill="currentColor"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-        >
-          <polygon points="50,0 100,0 50,100 0,100" />
-        </svg> */}
+        />
+        <rect
+          x="118"
+          width="404"
+          height="784"
+          fill="url(#9ebea6f4-a1f5-4d96-8c4e-4c2abf658047)"
+        />
+      </svg>
+    </div>
+    <div className="relative pt-6 pb-16 md:pb-20 lg:pb-24 xl:pb-32">
+      <Header links={links} />
 
-        <Header links={links} />
-
-        <div className="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-          <div className="sm:text-center lg:text-left">
+      <main className="mt-8 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-20 xl:mt-24">
+        <div className="lg:grid lg:grid-cols-12 lg:gap-8">
+          <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
             {mainText}
             {cta}
           </div>
+          <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+            <svg
+              className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 scale-75 origin-top sm:scale-100 lg:hidden"
+              width="640"
+              height="784"
+              fill="none"
+              viewBox="0 0 640 784"
+            >
+              <defs>
+                <pattern
+                  id="4f4f415c-a0e9-44c2-9601-6ded5a34a13e"
+                  x="118"
+                  y="0"
+                  width="20"
+                  height="20"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <rect
+                    x="0"
+                    y="0"
+                    width="4"
+                    height="4"
+                    className="text-gray-200"
+                    fill="currentColor"
+                  />
+                </pattern>
+              </defs>
+              <rect
+                y="72"
+                width="640"
+                height="640"
+                className="text-gray-50"
+                fill="currentColor"
+              />
+              <rect
+                x="118"
+                width="404"
+                height="784"
+                fill="url(#4f4f415c-a0e9-44c2-9601-6ded5a34a13e)"
+              />
+            </svg>
+            <div className="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
+              <div className="relative block w-full rounded-lg overflow-hidden">
+                {image}
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
-    <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">{image}</div>
-  </header>
+  </div>
 )
 
 Hero.propTypes = {
