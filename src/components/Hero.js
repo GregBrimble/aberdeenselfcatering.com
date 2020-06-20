@@ -46,7 +46,7 @@ const Hero = ({ mainText, icon, cta, image, links }) => (
         />
       </svg>
     </div>
-    <div className="relative pt-6 pb-16 md:pb-20 lg:pb-24 xl:pb-32">
+    <div className="relative pb-16 md:pb-20 lg:pb-24 xl:pb-32">
       <Header links={links} />
 
       <main className="mt-8 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-20 xl:mt-24">

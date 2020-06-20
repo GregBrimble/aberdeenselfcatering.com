@@ -9,7 +9,7 @@ const Header = ({ links }) => {
 
   return (
     <>
-      <nav className="relative max-w-screen-xl mx-auto flex items-center justify-between px-4 sm:px-6">
+      <nav className="relative max-w-screen-xl mx-auto flex items-center justify-between px-4 sm:px-6 pt-6">
         <div className="flex items-center flex-1">
           <div className="flex items-center justify-between w-full md:w-auto">
             <Link to="/" className="text-indigo-600">

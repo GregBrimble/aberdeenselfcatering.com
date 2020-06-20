@@ -28,12 +28,7 @@ const PropertiesPage = ({ data }) => {
         />
       </header>
       <main className="mt-6">
-        <img
-          className="w-full object-cover lg:w-full"
-          style={{ height: "33vh" }}
-          src="https://source.unsplash.com/featured/?house"
-          alt=""
-        />
+        <LoadableMap />
         <div className="max-w-screen-xl mx-auto">
           <ul>
             {properties.map(({ node: property }) => (
@@ -45,7 +40,6 @@ const PropertiesPage = ({ data }) => {
             ))}
           </ul>
         </div>
-        <LoadableMap />
       </main>
     </>
   )

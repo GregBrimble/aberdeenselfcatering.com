@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { Map as Leaflet, TileLayer, Marker, Popup } from "react-leaflet"
 import { useMediaQuery } from "react-responsive"
 import "leaflet/dist/leaflet.css"
@@ -14,26 +15,39 @@ L.Icon.Default.mergeOptions({
 })
 
 const Map = () => {
+  const isDesktop = useMediaQuery({
+    query: "(min-device-width: 1224px)",
+  })
   return (
-    <Leaflet center={[57.1433, -2.1342]} zoom={12}>
+    <Leaflet center={[57.1433, -2.1342]} zoom={isDesktop ? 13 : 12}>
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
       />
       <Marker position={[57.1434, -2.1721]}>
-        <Popup>Rose House</Popup>
+        <Popup>
+          <Link to="/properties/bruce-house-and-rose-house">Rose House</Link>
+        </Popup>
       </Marker>
       <Marker position={[57.1436, -2.1728]}>
-        <Popup>Bruce House</Popup>
+        <Popup>
+          <Link to="/properties/bruce-house-and-rose-house">Bruce House</Link>
+        </Popup>
       </Marker>
       <Marker position={[57.1444, -2.173]}>
-        <Popup>Weighbridge Cottage</Popup>
+        <Popup>
+          <Link to="/properties/weighbridge-cottage">Weighbridge Cottage</Link>
+        </Popup>
       </Marker>
       <Marker position={[57.1407, -2.1164]}>
-        <Popup>46 Ashvale Place</Popup>
+        <Popup>
+          <Link to="/properties/46-ashvale-place">46 Ashvale Place</Link>
+        </Popup>
       </Marker>
       <Marker position={[57.1405, -2.1168]}>
-        <Popup>49 Ashvale Place</Popup>
+        <Popup>
+          <Link to="/properties/49-ashvale-place">49 Ashvale Place</Link>
+        </Popup>
       </Marker>
     </Leaflet>
   )
