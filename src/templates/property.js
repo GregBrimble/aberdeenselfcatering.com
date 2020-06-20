@@ -4,6 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { graphql, Link } from "gatsby"
 import Header from "../components/Header"
 import ImageSlider from "../components/ImageSlider"
+import "./property.css"
 
 const shortcodes = { Link, ImageSlider }
 

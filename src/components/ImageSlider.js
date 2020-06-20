@@ -18,7 +18,7 @@ const ImageSlider = ({ slug, title }) => {
       allImageSharp {
         edges {
           node {
-            fluid(maxWidth: 1280) {
+            fluid(maxHeight: 240) {
               ...GatsbyImageSharpFluid
               originalName
             }
