@@ -5,8 +5,20 @@ import Image from "gatsby-image"
 import Hero from "../components/Hero"
 import ContactForm from "../components/ContactForm"
 import SEO from "../components/SEO"
-import FeatureGroup from "../components/FeatureGroup"
 import ThreeCards from "../components/ThreeCards"
+import LogoCloud from "../components/LogoCloud"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faChessRook,
+  faGlassWhiskey,
+  faMountain,
+  faWalking,
+  faTheaterMasks,
+  faLocationArrow,
+  faMapPin,
+  faCrown,
+} from "@fortawesome/free-solid-svg-icons"
+import { faFortAwesome } from "@fortawesome/free-brands-svg-icons"
 
 const IndexPage = () => {
   const {
@@ -52,9 +64,6 @@ const IndexPage = () => {
           }
         }
       }
-      # images/bruce-house_DSCF9592.png
-      # images/cottage_IMG_2917.jpg
-      # images/cottage_IMG_2925.jpg
       maintainedImage: file(
         relativePath: { eq: "images/cottage_20160601_131425.jpg" }
       ) {
@@ -82,8 +91,8 @@ const IndexPage = () => {
             </h2>
             <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
               If you are looking for self-catering accommodation in and around
-              Aberdeen, we can help. At A {"&"} L Enterprises, we offer
-              comfortable properties to rent.
+              Aberdeen, we can help. At A {"&"} L Enterprises, we offer a number
+              of comfortable properties that can accommodate up to six people.
             </p>
           </>
         }
@@ -102,17 +111,26 @@ const IndexPage = () => {
                 href="#contact"
                 className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline focus:border-indigo-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
               >
-                Contact A {"&"} L Enterprises
+                Contact
               </a>
             </div>
           </div>
         }
         image={
-          <Image
-            className="w-full"
-            fluid={heroImage.childImageSharp.fluid}
-            alt="Weighbridge Cottage"
-          />
+          <div className="mx-auto w-full lg:max-w-md">
+            <div className="relative rounded-lg shadow-lg">
+              <div className="relative block w-full rounded-lg overflow-hidden">
+                <Image
+                  className="w-full"
+                  fluid={heroImage.childImageSharp.fluid}
+                  alt="Weighbridge Cottage"
+                />
+              </div>
+            </div>
+            <div className="relative mt-5 text-gray-700 text-lg font-medium">
+              Weighbridge Cottage
+            </div>
+          </div>
         }
         links={[
           { label: "Our Properties", href: "/properties", internal: true },
@@ -124,9 +142,9 @@ const IndexPage = () => {
         ]}
       />
       <main>
-        <FeatureGroup
-          heading={
-            <>
+        <div className="py-12 bg-white">
+          <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="lg:text-center">
               <p className="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase">
                 Properties to rent in Aberdeen
               </p>
@@ -138,48 +156,129 @@ const IndexPage = () => {
                 Whether you are looking for a holiday home or you need a
                 serviced apartment for business purposes, you can count on us.
                 All our properties are well furnished, well-equipped and child
-                friendly. Our properties comes with a wide range of amenities
-                and features such as complimentary Wi-Fi, free parking and more.
+                friendly. Our properties have a wide range of amenities and
+                features such as complimentary Wi-Fi, free parking and more.
               </p>
+            </div>
+          </div>
+        </div>
+        <LogoCloud
+          title={
+            <>
+              <h2 className="text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
+                Many attractions and ventures waiting to be explored
+              </h2>
+              <div className="mt-3 max-w-3xl text-lg leading-7 text-gray-500">
+                <p>
+                  Aberdeen City Centre offers many restaurants, bars, shops,
+                  theatres, art galleries, fairgrounds, beaches and many more
+                  attractions.
+                </p>
+                <p className="mt-2">
+                  There are many attracions outwith Aberdeen city, such as
+                  castles, Royal Deeside, whisky distilleries and hill {"& "}
+                  forest walks.
+                </p>
+              </div>
             </>
           }
           items={[
-            {
-              label: "Royal Deeside",
-              href: "",
-              icon: (
-                <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-              ),
-              text:
-                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-            },
-            {
-              label: "Balmoral Castle",
-              href: "",
-              icon: (
-                <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-              ),
-              text:
-                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-            },
-            {
-              label: "Malt Whiskey Trail",
-              href: "",
-              icon: (
-                <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-              ),
-              text:
-                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-            },
-            {
-              label: "Castle Trail",
-              href: "",
-              icon: (
-                <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-              ),
-              text:
-                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-            },
+            <a
+              href="https://www.balmoralcastle.com/"
+              className="max-h-12 flex"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faChessRook}
+                className="text-2xl mr-3 self-center"
+              />
+              <div className="self-center">Balmoral Castle</div>
+            </a>,
+            <a
+              href="https://www.visitabdn.com/what-to-do/history-and-heritage/castles/"
+              className="max-h-12 flex"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faFortAwesome}
+                className="text-2xl mr-3 self-center"
+              />
+              <div className="self-center">Other Castles</div>
+            </a>,
+            <a
+              href="http://www.dcs.ed.ac.uk/home/jhb/whisky/scotland.html"
+              className="max-h-12 flex"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faGlassWhiskey}
+                className="text-2xl mr-3 self-center"
+              />
+              <div className="self-center">Scotland's Distilleries</div>
+            </a>,
+            <a
+              href="https://www.malts.com/en-gb/visit-our-distilleries/royal-lochnagar/"
+              className="max-h-12 flex"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faMountain}
+                className="text-2xl mr-3 self-center"
+              />
+              <div className="self-center">Lochnagar Distillery</div>
+            </a>,
+            <a
+              href="https://www.walkhighlands.co.uk/aberdeenshire/"
+              className="max-h-12 flex"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faWalking}
+                className="text-2xl mr-3 self-center"
+              />
+              <div className="self-center">Aberdeenshire Walks</div>
+            </a>,
+            <a
+              href="https://www.aberdeenperformingarts.com/"
+              className="max-h-12 flex"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faTheaterMasks}
+                className="text-2xl mr-3 self-center"
+              />
+              <div className="self-center">Theatre</div>
+            </a>,
+            <a
+              href="https://www.tripadvisor.co.uk/Attractions-g6749746-Activities-Royal_Deeside_Aberdeenshire_Scotland.html"
+              className="max-h-12 flex"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faCrown}
+                className="text-2xl mr-3 self-center"
+              />
+              <div className="self-center">Royal Deeside</div>
+            </a>,
+            <a
+              href="https://www.visitabdn.com/"
+              className="max-h-12 flex"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faMapPin}
+                className="text-2xl mr-3 self-center"
+              />
+              <div className="self-center">Visit Aberdeenshire</div>
+            </a>,
           ]}
         />
         <ThreeCards

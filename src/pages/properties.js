@@ -61,7 +61,13 @@ const PropertiesPage = ({ data }) => {
                   />
                 ),
                 href: "/properties/bruce-house-and-rose-house",
-                content: <p></p>,
+                content: (
+                  <p>
+                    Bruce House is a two bedroom apartment in the West End of
+                    Aberdeen in close proximity to Weighbridge Cottage and Rose
+                    House.
+                  </p>
+                ),
               },
               {
                 title: "Rose House",
@@ -73,7 +79,13 @@ const PropertiesPage = ({ data }) => {
                   />
                 ),
                 href: "/properties/bruce-house-and-rose-house",
-                content: <p></p>,
+                content: (
+                  <p>
+                    Rose House is a two bedroom apartment in the West End of
+                    Aberdeen in close proximity to Weighbridge Cottage and Bruce
+                    House.
+                  </p>
+                ),
               },
               {
                 title: "46 Ashvale Place",
@@ -84,7 +96,7 @@ const PropertiesPage = ({ data }) => {
                     alt="46 Ashvale Place"
                   />
                 ),
-                href: "/properties/46-ashvale-place",
+                href: "/properties/46-ashvale-place-and-49-ashvale-place",
                 content: <p></p>,
               },
               {
@@ -96,7 +108,7 @@ const PropertiesPage = ({ data }) => {
                     alt="49 Ashvale Place"
                   />
                 ),
-                href: "/properties/49-ashvale-place",
+                href: "/properties/46-ashvale-place-and-49-ashvale-place",
                 content: <p></p>,
               },
             ]}
@@ -121,7 +133,9 @@ export const pageQuery = graphql`
       }
     }
     AshvalePlace46: file(
-      relativePath: { eq: "images/46-ashvale-place_DSCF9045.png" }
+      relativePath: {
+        eq: "images/46-ashvale-place-and-49-ashvale-place_DSCF9045.png"
+      }
     ) {
       childImageSharp {
         fluid {
@@ -130,7 +144,9 @@ export const pageQuery = graphql`
       }
     }
     AshvalePlace49: file(
-      relativePath: { eq: "images/49-ashvale-place_DSCF9014.jpeg" }
+      relativePath: {
+        eq: "images/46-ashvale-place-and-49-ashvale-place_DSCF9014.jpeg"
+      }
     ) {
       childImageSharp {
         fluid {
