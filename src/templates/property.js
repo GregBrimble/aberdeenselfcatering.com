@@ -3,10 +3,20 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { graphql, Link } from "gatsby"
 import Header from "../components/Header"
+import FeatureGroup from "../components/FeatureGroup"
 import ImageSlider from "../components/ImageSlider"
-import "./property.css"
 
-const shortcodes = { Link, ImageSlider }
+const Title = ({ children }) => (
+  <h3 className="text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+    {children}
+  </h3>
+)
+
+const SubTitle = ({ children }) => (
+  <p className="mt-4 max-w-3xl text-xl leading-7 text-gray-500">{children}</p>
+)
+
+const shortcodes = { Link, ImageSlider, FeatureGroup, Title, SubTitle }
 
 const Property = ({ data: { mdx } }) => {
   return (
@@ -19,8 +29,7 @@ const Property = ({ data: { mdx } }) => {
           ]}
         />
       </header>
-      <main className="mt-6 max-w-screen-xl mx-auto prose">
-        <h1>{mdx.frontmatter.title}</h1>
+      <main className="mt-12 max-w-screen-xl mx-auto prose px-4 xl:px-0">
         <MDXProvider components={shortcodes}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>

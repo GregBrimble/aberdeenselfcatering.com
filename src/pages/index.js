@@ -29,7 +29,6 @@ const IndexPage = () => {
           pricing
         }
       }
-      # heroImage: file(relativePath: { eq: "images/cottage_IMG_2928.jpg" }) {
       heroImage: file(relativePath: { eq: "images/cottage_front view.png" }) {
         childImageSharp {
           fluid {

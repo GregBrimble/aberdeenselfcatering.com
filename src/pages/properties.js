@@ -46,14 +46,13 @@ const PropertiesPage = ({ data }) => {
                 href: "/properties/weighbridge-cottage",
                 content: (
                   <p>
-                    At A {"&"} L Enterprises, our serviced apartments are fully
-                    furnished and developed with a style and comfort in mind. We
-                    provide high-quality customer service.
+                    Weighbridge Cottage is a 2 bedroom granite cottage situated
+                    in the West End of Aberdeen.
                   </p>
                 ),
               },
               {
-                title: "Bruse House",
+                title: "Bruce House",
                 image: (
                   <Image
                     className="h-48 w-full object-cover"
@@ -62,13 +61,7 @@ const PropertiesPage = ({ data }) => {
                   />
                 ),
                 href: "/properties/bruce-house-and-rose-house",
-                content: (
-                  <p>
-                    At A {"&"} L Enterprises, our serviced apartments are fully
-                    furnished and developed with a style and comfort in mind. We
-                    provide high-quality customer service.
-                  </p>
-                ),
+                content: <p></p>,
               },
               {
                 title: "Rose House",
@@ -80,13 +73,7 @@ const PropertiesPage = ({ data }) => {
                   />
                 ),
                 href: "/properties/bruce-house-and-rose-house",
-                content: (
-                  <p>
-                    At A {"&"} L Enterprises, our serviced apartments are fully
-                    furnished and developed with a style and comfort in mind. We
-                    provide high-quality customer service.
-                  </p>
-                ),
+                content: <p></p>,
               },
               {
                 title: "46 Ashvale Place",
@@ -98,13 +85,7 @@ const PropertiesPage = ({ data }) => {
                   />
                 ),
                 href: "/properties/46-ashvale-place",
-                content: (
-                  <p>
-                    At A {"&"} L Enterprises, our serviced apartments are fully
-                    furnished and developed with a style and comfort in mind. We
-                    provide high-quality customer service.
-                  </p>
-                ),
+                content: <p></p>,
               },
               {
                 title: "49 Ashvale Place",
@@ -116,13 +97,7 @@ const PropertiesPage = ({ data }) => {
                   />
                 ),
                 href: "/properties/49-ashvale-place",
-                content: (
-                  <p>
-                    At A {"&"} L Enterprises, our serviced apartments are fully
-                    furnished and developed with a style and comfort in mind. We
-                    provide high-quality customer service.
-                  </p>
-                ),
+                content: <p></p>,
               },
             ]}
           />
