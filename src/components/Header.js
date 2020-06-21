@@ -89,7 +89,9 @@ const Header = ({ links }) => {
           <div className="rounded-lg shadow-md">
             <div className="rounded-lg bg-white shadow-xs overflow-hidden">
               <div className="px-5 pt-4 flex items-center justify-between">
-                <Logo />
+                <Link to="/">
+                  <Logo />
+                </Link>
                 <div className="-mr-2">
                   <button
                     onClick={() => setOpen(false)}
