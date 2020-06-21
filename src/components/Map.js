@@ -41,12 +41,16 @@ const Map = () => {
       </Marker>
       <Marker position={[57.1407, -2.1164]}>
         <Popup>
-          <Link to="/properties/46-ashvale-place">46 Ashvale Place</Link>
+          <Link to="/properties/46-ashvale-place-and-49-ashvale-place">
+            46 Ashvale Place
+          </Link>
         </Popup>
       </Marker>
       <Marker position={[57.1405, -2.1168]}>
         <Popup>
-          <Link to="/properties/49-ashvale-place">49 Ashvale Place</Link>
+          <Link to="/properties/46-ashvale-place-and-49-ashvale-place">
+            49 Ashvale Place
+          </Link>
         </Popup>
       </Marker>
     </Leaflet>
