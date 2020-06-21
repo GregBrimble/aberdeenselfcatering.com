@@ -180,7 +180,7 @@ const IndexPage = () => {
               label: "Well Equipped",
               icon: <FontAwesomeIcon icon={faUtensils} />,
               text:
-                "Bedding and towels are provided. Our kitchens are fully equiped and fitted with a microwave, fridge-freezer and washing machine.",
+                "Bedding and towels are provided. Our kitchens are fully equipped and fitted with a microwave, fridge-freezer and washing machine.",
             },
             {
               label: "Well Maintained",
