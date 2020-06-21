@@ -259,7 +259,7 @@ const IndexPage = () => {
                   attractions.
                 </p>
                 <p className="mt-2">
-                  There are many attracions outwith Aberdeen city, such as
+                  There are also many attractions outwith Aberdeen City, such as
                   castles, Royal Deeside, whisky distilleries and hill {"& "}
                   forest walks.
                 </p>
