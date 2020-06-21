@@ -1,12 +1,21 @@
 import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import classNames from "../../lib/classNames"
 
-const ThreeCards = ({ heading, items }) => (
-  <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
-    <div className="absolute inset-0">
-      <div className="bg-white h-1/3 sm:h-2/3"></div>
-    </div>
+const ThreeCards = ({ heading, items, background = true }) => (
+  <div
+    className={classNames(
+      "relative",
+      background ? "bg-gray-50" : "bg-white",
+      "pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
+    )}
+  >
+    {background && (
+      <div className="absolute inset-0">
+        <div className="bg-white h-1/3 sm:h-2/3"></div>
+      </div>
+    )}
     <div className="relative max-w-7xl mx-auto">
       {heading && <div className="text-center">{heading}</div>}
 
@@ -38,6 +47,7 @@ const ThreeCards = ({ heading, items }) => (
 
 ThreeCards.propTypes = {
   heading: PropTypes.node,
+  background: PropTypes.bool,
   items: PropTypes.arrayOf(
     PropTypes.exact({
       title: PropTypes.string.isRequired,

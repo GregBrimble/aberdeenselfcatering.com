@@ -3,6 +3,7 @@ title: Weighbridge Cottage
 slug: /properties/weighbridge-cottage
 ---
 
+<FontAwesomeIcon icon="bed" />
 <Title>Weighbridge Cottage</Title>
 <div className="mt-2 flex flex-col sm:flex-row sm:flex-wrap">
   <div className="mt-2 flex items-center text-sm leading-5 text-gray-500 sm:mr-6">
@@ -11,12 +12,7 @@ slug: /properties/weighbridge-cottage
       viewBox="0 0 20 20"
       fill="currentColor"
     >
-      <path
-        fillRule="evenodd"
-        d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
-        clipRule="evenodd"
-      />
-      <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+      <iconHome />
     </svg>
     2 Bedroom Cottage
   </div>
@@ -26,11 +22,7 @@ slug: /properties/weighbridge-cottage
       viewBox="0 0 20 20"
       fill="currentColor"
     >
-      <path
-        fillRule="evenodd"
-        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-        clipRule="evenodd"
-      />
+      <iconBed />
     </svg>
     Sleeps 6
   </div>
@@ -70,51 +62,37 @@ slug: /properties/weighbridge-cottage
         items={[
           {
             label: "Sleeps 6",
-            href: "",
-            icon: (
-              <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-            ),
+            icon: (<iconBed />),
             text:
               "The cottage has a double bedroom and twin room with a double fold out bed in living room.",
           },
           {
             label: "Modern Interior",
-            href: "",
-            icon: (
-              <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-            ),
+            icon: (<iconHome />),
             text:
               "The cottage is light and airy, decorated with modern furniture and fittings.",
           },
           {
             label: "Private Garden",
-            href: "",
-            icon: (
-              <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-            ),
+            icon: (<iconSun />),
             text:
               "There is a secure, secluded garden to the rear of property with a drying line if required.",
           },
           {
             label: "Parking Available",
-            href: "",
-            icon: (
-              <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-            ),
+            icon: (<iconParking />),
             text:
               "Off road parking for two car is available at front of property.",
           },
           {
             label: "Welcome Pack",
-            href: "",
-            icon: (
-              <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-            ),
+            icon: (<iconCoffee />),
             text:
               "A welcome self catering pack of tea, coffee, milk and biscuits on arrival.",
           },
         ]}
       />
     </p>
+
   </div>
 </div>

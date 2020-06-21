@@ -8,8 +8,8 @@ const FeatureGroup = ({ heading, items }) => (
 
       <div className="mt-10">
         <ul className="md:grid md:grid-cols-2 md:col-gap-8 md:row-gap-10">
-          {items.map(({ href, label, text, icon }) => (
-            <li className="mt-10 first:mt-0 md:mt-0" key={label}>
+          {items.map(({ label, text, icon, className }) => (
+            <li className={`mt-10 first:mt-0 md:mt-0 ${className}`} key={label}>
               <div className="flex">
                 <div className="flex-shrink-0">
                   <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
@@ -48,7 +48,7 @@ FeatureGroup.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.exact({
       label: PropTypes.string.isRequired,
-      href: PropTypes.string.isRequired,
+      className: PropTypes.string,
       icon: PropTypes.node.isRequired,
       text: PropTypes.string.isRequired,
     })

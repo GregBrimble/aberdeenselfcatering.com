@@ -8,7 +8,7 @@ module.exports = {
         { value: "+44 1224 868 957", type: "landline" },
         { value: "+44 7927 938 834", type: "mobile" },
       ],
-      emailAddress: "info@aberdeenselfcatering.com",
+      emailAddress: "allanlinda5@gmail.com",
     },
     pricing: "£250 per week",
   },

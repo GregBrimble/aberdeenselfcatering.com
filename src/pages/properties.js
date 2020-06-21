@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Loadable from "react-loadable"
 import Image from "gatsby-image"
 import ThreeCards from "../components/ThreeCards"
@@ -12,8 +12,6 @@ const LoadableMap = Loadable({
 })
 
 const PropertiesPage = ({ data }) => {
-  const { edges: properties } = data.allMdx
-
   return (
     <>
       <header className="overflow-hidden max-w-screen-xl mx-auto">
@@ -33,6 +31,7 @@ const PropertiesPage = ({ data }) => {
         <LoadableMap />
         <div className="max-w-screen-xl mx-auto">
           <ThreeCards
+            background={false}
             items={[
               {
                 title: "Weighbridge Cottage",
@@ -97,7 +96,12 @@ const PropertiesPage = ({ data }) => {
                   />
                 ),
                 href: "/properties/46-ashvale-place-and-49-ashvale-place",
-                content: <p></p>,
+                content: (
+                  <p>
+                    46 Ashvale Place is a one bedroom apartment that sleeps two
+                    and is situated in Aberdeen City Centre.
+                  </p>
+                ),
               },
               {
                 title: "49 Ashvale Place",
@@ -109,7 +113,12 @@ const PropertiesPage = ({ data }) => {
                   />
                 ),
                 href: "/properties/46-ashvale-place-and-49-ashvale-place",
-                content: <p></p>,
+                content: (
+                  <p>
+                    49 Ashvale Place is a one bedroom apartment that sleeps two
+                    and is situated in Aberdeen City Centre.
+                  </p>
+                ),
               },
             ]}
           />
@@ -121,17 +130,6 @@ const PropertiesPage = ({ data }) => {
 
 export const pageQuery = graphql`
   query {
-    allMdx {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            slug
-          }
-        }
-      }
-    }
     AshvalePlace46: file(
       relativePath: {
         eq: "images/46-ashvale-place-and-49-ashvale-place_DSCF9045.png"

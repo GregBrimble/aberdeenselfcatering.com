@@ -8,3 +8,7 @@
 html {
   @apply antialiased;
 }
+
+.no-margin {
+  margin-bottom: -6px !important;
+}

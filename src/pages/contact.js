@@ -1,10 +1,11 @@
 import React from "react"
+import Image from "gatsby-image"
 import Header from "../components/Header"
 import ContactForm from "../components/ContactForm"
 import { useStaticQuery, graphql } from "gatsby"
 
 const Contact = () => {
-  const { site } = useStaticQuery(graphql`
+  const { site, image } = useStaticQuery(graphql`
     {
       site {
         siteMetadata {
@@ -16,6 +17,13 @@ const Contact = () => {
             emailAddress
           }
           pricing
+        }
+      }
+      image: file(relativePath: { eq: "images/aberdeen-skyline.jpg" }) {
+        childImageSharp {
+          fixed(height: 274) {
+            ...GatsbyImageSharpFixed
+          }
         }
       }
     }
@@ -32,18 +40,38 @@ const Contact = () => {
         />
       </header>
       <main className="mt-6">
-        <img
-          className="w-full object-cover lg:w-full"
-          style={{ height: "33vh" }}
-          src="https://source.unsplash.com/featured/?house"
-          alt=""
+        <Image
+          fixed={image.childImageSharp.fixed}
+          className="max-w-full object-cover"
+          alt="Aberdeen Skyline"
         />
+        <div className="text-xs mr-4 -mt-7 z-10 absolute text-gray-50 right-0">
+          <a
+            href="https://commons.wikimedia.org/wiki/File:Aberdeen_banner_view_from_Tollohill_Woods.JPG"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Aberdeen City Centre from Tollohill Woods, Aberdeen, Scotland,
+            United Kingdom
+          </a>{" "}
+          by Ragazzi99 /{" "}
+          <a
+            href="https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            CC BY-SA 4.0
+          </a>
+        </div>
         <ContactForm
           mainText={
             <p className="mt-3 text-lg leading-6 text-gray-500">
               For a memorable holiday, call us or send a message.
             </p>
           }
+          emailAddress={site.siteMetadata.contact.emailAddress}
           contactInfo={
             <>
               {site.siteMetadata.contact.phoneNumbers.map(({ value, type }) => (
