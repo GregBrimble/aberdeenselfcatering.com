@@ -27,8 +27,8 @@ ${message}
 
   useEffect(() => {
     const searchParams = new URLSearchParams()
-    searchParams.set("subject", encodeURIComponent(subject))
-    searchParams.set("body", encodeURIComponent(body))
+    searchParams.set("subject", subject)
+    searchParams.set("body", body)
     setLink(`mailto:${emailAddress}?${searchParams.toString()}`)
   }, [subject, body])
 
