@@ -82,7 +82,10 @@ const Header = ({ links }) => {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-10">
+        <div
+          className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+          style={{ zIndex: 1001 }}
+        >
           <div className="rounded-lg shadow-md">
             <div className="rounded-lg bg-white shadow-xs overflow-hidden">
               <div className="px-5 pt-4 flex items-center justify-between">
