@@ -43,14 +43,18 @@ const IndexPage = () => {
           pricing
         }
       }
-      heroImage: file(relativePath: { eq: "images/cottage_front view.png" }) {
+      heroImage: file(
+        relativePath: { eq: "images/weighbridge-cottage_front view.png" }
+      ) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      heroImage2: file(relativePath: { eq: "images/cottage_IMG_2928.jpg" }) {
+      heroImage2: file(
+        relativePath: { eq: "images/weighbridge-cottage_IMG_2928.jpg" }
+      ) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -58,7 +62,7 @@ const IndexPage = () => {
         }
       }
       heroImage3: file(
-        relativePath: { eq: "images/cottage_20160601_131630.jpg" }
+        relativePath: { eq: "images/weighbridge-cottage_20160601_131630.jpg" }
       ) {
         childImageSharp {
           fluid {

@@ -120,6 +120,23 @@ const PropertiesPage = ({ data }) => {
                   </p>
                 ),
               },
+              {
+                title: "Bulgarian Villa",
+                image: (
+                  <Image
+                    className="h-48 w-full object-cover"
+                    fluid={data.BulgarianVilla.childImageSharp.fluid}
+                    alt="Bulgarian Villa"
+                  />
+                ),
+                href: "/properties/bulgarian-villa",
+                content: (
+                  <p>
+                    The Bulgarian Villa is part of a gated complex with three
+                    other villas, a shared pool and communual gardens.
+                  </p>
+                ),
+              },
             ]}
           />
         </div>
@@ -173,7 +190,18 @@ export const pageQuery = graphql`
       }
     }
     WeighbridgeCottage: file(
-      relativePath: { eq: "images/cottage_front view.png" }
+      relativePath: { eq: "images/weighbridge-cottage_front view.png" }
+    ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    BulgarianVilla: file(
+      relativePath: {
+        eq: "images/bulgarian-villa_105405512_2624629617796426_6293980994153138068_n.jpg"
+      }
     ) {
       childImageSharp {
         fluid {
